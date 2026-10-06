@@ -1,0 +1,57 @@
+# Kartik's Marketplace Bot - copy this file to config.yaml and edit it.
+searches:
+- query: ps5
+  aliases:
+  - playstation 5
+  - play station 5
+  - ps five
+  description: A Sony PlayStation 5 console for sale. Accept listings for the console,
+    with or without controllers or games. Reject wanted posts, swaps only, fridges,
+    TVs, accessories only, repairs, and unrelated items.
+- query: series s
+  aliases:
+  - xbox series s
+  - xbox s
+  - series ess
+  description: A Microsoft Xbox Series S console for sale. Accept listings for the
+    console, with or without controllers or games. Reject wanted posts, Xbox One/S/X
+    older consoles, accessories only, repairs, and unrelated items.
+max_price: 1000
+currency: NZD
+location: Auckland, New Zealand
+radius_km: 35
+location_slug: auckland
+search_url: null
+listing_description: Only alert for listings that clearly sell the item I searched
+  for. Reject wanted/buying posts, unrelated products, accessories-only listings,
+  services, rentals, or vague posts.
+message_template: Kia ora! Is this still available? I can pick up today with cash.
+notification:
+  provider: discord
+  webhook_url: PASTE_YOUR_DISCORD_WEBHOOK_URL_HERE
+  recent_ping_minutes: 60
+ai:
+  enabled: false
+  api_key: PASTE_YOUR_GEMINI_API_KEY_HERE
+  model: gemini-3.1-flash-lite
+  endpoint: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  timeout_seconds: 30
+poll:
+  fuzzy_titles: true
+  min_seconds: 120
+  max_seconds: 300
+  max_cards: 60
+  max_new_per_poll: 5
+  detail_delay_min_seconds: 4
+  detail_delay_max_seconds: 8
+  alert_on_first_run: true
+  require_all_query_words: true
+  alert_unknown_price: false
+browser:
+  engine: chromium
+  profile_dir: data/browser-profile
+  database_path: data/listings.sqlite3
+  setup_state_path: data/search-state.json
+  timeout_seconds: 30
+  locale: en-NZ
+  channel: msedge

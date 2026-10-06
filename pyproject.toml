@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marketplace-monitor"
+version = "0.1.0"
+description = "Kartik's Marketplace Bot - Facebook Marketplace searches and phone alerts"
+requires-python = ">=3.11"
+dependencies = ["playwright>=1.49,<2", "PyYAML>=6.0.2,<7"]
+
+[project.scripts]
+marketplace-bot = "marketplace_bot.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["marketplace_bot*"]
