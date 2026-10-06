@@ -1,5 +1,7 @@
 # Kartik's Marketplace Bot
 
+Bot made to help you find items on marketplace :)\
+
 New here? Follow [the step-by-step setup guide](setup_instructions.md).
 Start with `config.example.yaml`; keep your own credentials in `config.yaml`.
 
